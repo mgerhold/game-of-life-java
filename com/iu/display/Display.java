@@ -10,9 +10,10 @@ public class Display {
     private int height;
     private int scale;
     private JFrame frame;
+    public static final int MIN_SIZE = 20;
 
     public Display(final String windowTitle, final int width, final int height, final int scale) {
-        if (width < 100 || height < 100) {
+        if (width < MIN_SIZE || height < MIN_SIZE) {
             throw new IllegalArgumentException();
         }
         image = new BufferedImage(width * scale, height * scale, BufferedImage.TYPE_INT_RGB);
