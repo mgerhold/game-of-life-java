@@ -6,11 +6,11 @@ import com.iu.display.Display;
 
 public class Main {
     private static boolean[][] createRandomPixels(final int width, final int height, final Random random) {
-        final var pixels = new boolean[width][height];
+        final var pixels = new boolean[height][width];
 
         for (int y = 0; y < pixels.length; ++y) {
             for (int x = 0; x < pixels[0].length; ++x) {
-                pixels[x][y] = random.nextBoolean();
+                pixels[y][x] = random.nextBoolean();
             }
         }
         return pixels;
